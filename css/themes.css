@@ -1,0 +1,13 @@
+.dark{
+    background:#111;
+    color:white;
+}
+
+.dark .card,
+.dark .jobcard,
+.dark .job-form,
+.dark .profile-card,
+.dark .chart-card{
+    background:#1e1e1e;
+    color:white;
+}
