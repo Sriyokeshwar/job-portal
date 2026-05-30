@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | JobFlow</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <style>
+        .auth-header{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:15px;
+        margin-bottom:25px;
+        }
+
+        .auth-header .logoim{
+            width:90px;
+            height:90px;
+            object-fit:contain;
+            flex-shrink:0;
+        }
+
+        .auth-header .logo{
+            margin:0;
+            font-size:48px;
+            line-height:1;
+            white-space:nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content auth-page">
+
+    <div class="register-container">
+
+        <div class="auth-header">
+            <img src="../assets/icons/logo.png" alt="Logo" class="logoim">
+            <h1 class="logo">JobFlow</h1>
+            <button id="themeToggleBtn" class="theme-btn"> 🌙 </button>
+        </div>
+
+        <h2 class="page-title" style="text-align: center;">Create Account</h2>
+        <p class="auth-text">
+            Join JobFlow and start discovering, sharing and tracking job opportunities with ease.
+        </p>
+
+        <form id="registerForm" class="auth-form">
+            <label for="profileImage" class="upload-btn">
+                📷 Upload Profile Picture
+            </label>
+            <input type="file" id="profileImage" accept="image/*" hidden>
+
+            <p id="fileName" class="file-name">
+                No file selected
+            </p>
+
+            <label class="field-label">
+                👤 Full Name
+            </label>
+
+            <input type="text" id="name" class="input-box" placeholder="Full Name (e.g. Karthik Raj)" required>
+            <label class="field-label">
+                📧 Email Address
+            </label>
+
+            <input type="email" id="email" class="input-box" placeholder="Email Address (e.g. karthik@example.com)" required>
+            <label class="field-label">
+                📱 Phone Number
+            </label>
+            <input type="tel" id="phone" class="input-box" placeholder="Phone Number (e.g. 9876543210)" required>
+
+            <label class="field-label">
+                🔒 Create Password
+            </label>
+
+            <input type="password" id="password" class="input-box" placeholder="Create Password" required>
+
+            <label class="field-label">
+                🔐 Confirm Password
+            </label>
+
+            <input type="password" id="confirmPassword" class="input-box" placeholder="Confirm Password" required>
+            
+            <label class="field-label">  ⚧ Gender </label>
+
+            <div class="gender-group ">
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="Male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Other">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="terms-box">
+
+                <label>
+                    <input type="checkbox" id="agreeTerms" required>
+                    I confirm that all information provided is accurate and I agree to follow JobFlow community guidelines and terms of use.
+                </label>
+            </div>
+
+            <button type="submit" id="registerBtn" class="submit-btn" disabled>
+                🚀 Create My Account
+            </button>
+
+        </form>
+
+        <div class="auth-info">
+
+            <div class="info-item">
+                🚀 Discover community shared job opportunities
+            </div>
+
+            <div class="info-item">
+                📋 Track all your applications in one place
+            </div>
+
+            <div class="info-item">
+                📊 Monitor your job search progress
+            </div>
+
+            <div class="info-item">
+                🎯 Build and manage your professional profile
+            </div>
+
+        </div>
+
+        <p class="redirect-text">
+            Already have an account?
+            <a href="./login.html" class="redirect-link">
+                Login
+            </a>
+        </p>
+
+        <p class="redirect-text">
+            <a href="./index.html" class="redirect-link">
+                ← Back To Home
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="../script/storage.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/theme.js"></script>
+
+<script>
+
+const agreeTerms = document.getElementById("agreeTerms");
+const registerBtn = document.getElementById("registerBtn");
+const profileImage = document.getElementById("profileImage");
+const fileName = document.getElementById("fileName");
+
+agreeTerms.addEventListener("change", () => {
+
+    registerBtn.disabled = !agreeTerms.checked;
+
+});
+
+profileImage.addEventListener("change", () => {
+
+    if(profileImage.files.length > 0){
+
+        fileName.textContent = profileImage.files[0].name;
+
+    }else{
+
+        fileName.textContent = "No file selected";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

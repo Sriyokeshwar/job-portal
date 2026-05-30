@@ -1,0 +1,222 @@
+/* DARK THEME */
+
+body.dark-theme{
+background:#0f172a;
+color:#f8fafc;
+}
+
+/* ALL BOXES / CARDS */
+
+body.dark-theme .sidebar,
+body.dark-theme .card,
+body.dark-theme .overview-card,
+body.dark-theme .info-card,
+body.dark-theme .chart-card,
+body.dark-theme .recent-applications,
+body.dark-theme .profile-card,
+body.dark-theme .job-form,
+body.dark-theme .login-container,
+body.dark-theme .register-container,
+body.dark-theme .jobcard,
+body.dark-theme .applications-container,
+body.dark-theme .jobs-container,
+body.dark-theme .search-box,
+body.dark-theme .gender-group,
+body.dark-theme .terms-box{
+background:#1e293b;
+color:#ffffff;
+border:1px solid #334155;
+box-shadow:
+0 10px 30px rgba(0,0,0,0.35),
+0 0 20px rgba(56,189,248,0.12);
+}
+
+/* HEADINGS */
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme .page-title{
+color:#ffffff;
+}
+
+/* TEXT */
+body.dark-theme .page-subtitle,
+body.dark-theme .dashboard-subtitle,
+body.dark-theme .section-text,
+body.dark-theme .footer-text,
+body.dark-theme .chart-description,
+body.dark-theme .auth-text,
+body.dark-theme .redirect-text,
+body.dark-theme .info-card p,
+body.dark-theme .overview-card p,
+body.dark-theme .jobcard p,
+body.dark-theme #profileEmail{
+color:#cbd5e1;
+}
+
+/*INPUTS*/
+body.dark-theme .input-box,
+body.dark-theme .search,
+body.dark-theme .job-form input,
+body.dark-theme .job-form textarea,
+body.dark-theme .job-form select{
+background:#0f172a;
+color:#ffffff;
+border:1px solid #475569;
+}
+
+body.dark-theme .input-box::placeholder,
+body.dark-theme .search::placeholder,
+body.dark-theme textarea::placeholder{
+color:#94a3b8;
+}
+
+body.dark-theme .input-box:focus,
+body.dark-theme .search:focus{
+border-color:#38bdf8;
+box-shadow:0 0 0 4px rgba(56,189,248,0.15);
+}
+
+/*SEARCH BOX*/
+.search-box{
+background:#08f2cf04;
+padding:5px;
+border-radius:12px;
+}
+
+body.dark-theme .search-box{
+background:#1e293b;
+border:1px solid #334155;
+}
+
+/* BUTTONS */
+body.dark-theme .search-btn,
+body.dark-theme .theme-btn{
+background:#38bdf8;
+color:#ffffff;
+box-shadow:0 0 15px rgba(56,189,248,0.35);
+}
+
+body.dark-theme .submit-btn{
+background:linear-gradient(
+135deg,
+#0ea5e9,
+#38bdf8,
+#7dd3fc
+);
+color:#ffffff;
+box-shadow:0 0 20px rgba(56,189,248,0.25);
+}
+
+/*SIDEBAR*/
+body.dark-theme .sidebar{
+background:linear-gradient( 145deg,#0f172a,#1e293b);
+}
+
+button:hover,
+.upload-btn:hover,
+.submit-btn:hover{
+    box-shadow:0 4px 15px rgba(5, 247, 215, 0.3);
+}
+
+body.dark-theme .sidebar ul li a{
+color:#e2e8f0;
+}
+
+body.dark-theme .sidebar ul li a:hover,
+body.dark-theme .active-link{
+background:linear-gradient(135deg,#0ea5e9,#38bdf8,#7dd3fc);
+color:#ffffff !important;
+box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+/* LOGOUT */
+
+body.dark-theme .logout-btn{
+background:#dc2626;
+color:#ffffff;
+}
+
+/* PROFILE STATUS */
+
+body.dark-theme .profile-status{
+background:#082f49;
+color:#7dd3fc;
+padding:10px 20px;
+border-radius:20px;
+}
+
+/* CHART */
+
+body.dark-theme canvas{
+background:#ffffff;
+border-radius:12px;
+}
+
+/* JOB CARD */
+
+body.dark-theme .jobcard{
+background:#273449;
+}
+
+body.dark-theme .jobcard:hover{
+background:#334155;
+transform:translateY(-4px);
+}
+
+/* AUTH HEADER */
+
+.auth-header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+margin-bottom:25px;
+position:relative;
+}
+
+/* THEME BUTTON */
+
+.theme-btn{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+/* INFO ITEMS */
+
+body.dark-theme .info-item{
+background:#334155;
+color:#ffffff;
+border:1px solid #475569;
+}
+
+/* REGISTER PAGE  */
+
+body.dark-theme .gender-group,
+body.dark-theme .terms-box{
+background:#334155;
+border:1px solid #475569;
+color:#ffffff;
+}
+
+body.dark-theme .gender-group label,
+body.dark-theme .terms-box label{
+color:#ffffff;
+}
+
+body.dark-theme input[type="radio"],
+body.dark-theme input[type="checkbox"]{
+accent-color:#38bdf8;
+}
+
+body.dark-theme .field-label{
+color:#f8fafc;
+}

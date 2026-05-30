@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | JobFlow</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <style>
+        .auth-header{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:15px;
+            margin-bottom:25px;
+        }
+
+        .auth-header .logoim{
+            width:80px;
+            height:80px;
+            object-fit:contain;
+            flex-shrink:0;
+        }
+
+        .auth-header .logo{
+            margin:0;
+            font-size:42px;
+            line-height:1;
+            white-space:nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content auth-page">
+
+    <div class="login-container">
+
+        <div class="auth-header">
+            <img src="../assets/icons/logo.png" alt="Logo" class="logoim">
+            <h1 class="logo"> JobFlow </h1>
+            <button id="themeToggleBtn" class="theme-btn">🌙</button>
+        </div>
+
+        <h2 class="page-title" style="text-align: center;"> Welcome Back </h2>
+
+        <p class="auth-text">
+            Login to continue your job tracking journey and manage opportunities.
+        </p>
+
+        <form id="loginForm" class="auth-form">
+
+            <input type="email" id="email" class="input-box" placeholder="Enter Email Address" required>
+
+            <input type="password" id="password" class="input-box" placeholder="Enter Password" required>
+
+            <button type="submit" id="loginBtn" class="submit-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="auth-info">
+
+            <div class="info-item">
+                📋 Track all your job applications
+            </div>
+
+            <div class="info-item">
+                🔍 Discover community shared opportunities
+            </div>
+
+            <div class="info-item">
+                📊 Monitor your application progress
+            </div>
+
+            <div class="info-item">
+                🎯 Manage your professional profile
+            </div>
+
+        </div>
+
+        <p class="redirect-text">
+            Don't have an account?
+            <a href="./register.html" class="redirect-link">
+                Register
+            </a>
+        </p>
+
+        <p class="redirect-text">
+            Back to
+            <a href="./index.html" class="redirect-link">
+                Home
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="../script/storage.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/theme.js"></script>
+
+</body>
+</html>

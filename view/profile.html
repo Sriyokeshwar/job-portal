@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | JobFlow</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo-container">
+
+        <img src="../assets/icons/logo.png" alt="Logo" class="logoim">
+
+        <h2 class="logo">JobFlow</h2>
+
+        <div class="menu-btn" id="menuBtn">
+            ☰
+        </div>
+
+    </div>
+
+    <nav id="sidebarNav">
+
+        <ul>
+
+            <li>
+                <a href="./dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="./index.html">
+                    Jobs
+                </a>
+            </li>
+
+            <li>
+                <a href="./add-job.html">
+                    Add Job
+                </a>
+            </li>
+
+            <li>
+                <a href="./applications.html">
+                    Applications
+                </a>
+            </li>
+
+            <li>
+                <a href="./profile.html" class="active-link">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <button class="logout-btn" onclick="logout()">
+                    Logout
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+
+<div class="main-content">
+
+    <div class="topbar">
+        <form class="search-box">
+            <input type="text" class="search" placeholder="Search jobs, applications...">
+            <button type="submit" class="search-btn"> 🔍 </button>
+        </form>
+
+        <button id="themeToggleBtn" class="theme-btn"> 🌙 </button>
+    </div>
+
+    <div class="page-header">
+        <h1 class="page-title"> My Profile </h1>
+
+        <p class="page-subtitle">
+            Manage your account information and keep your details up to date
+        </p>
+    </div>
+
+    <div class="profile-card">
+
+        <img src="../assets/images/user.png" alt="Profile" class="profile-img" id="profileImage">
+
+        <h2 id="profileName"> User Name </h2>
+
+        <p id="profileEmail"> user@email.com </p>
+
+        <div class="profile-status">
+         🟢 Active Member
+        </div>
+
+        <form id="profileForm" class="profile-form">
+            <input type="text" id="name" class="input-box" placeholder="Full Name" required>
+            <input type="email" id="email" class="input-box" placeholder="Email Address" required>
+            <input type="text" id="phone" class="input-box" placeholder="Phone Number" required>
+            <button type="submit" class="submit-btn">
+                Update Profile
+            </button>
+        </form>
+    </div>
+
+    <div class="profile-overview">
+        <div class="overview-card">
+            <h3> Account Details </h3>
+            <p>
+                Update your personal information to keep your profile accurate.
+            </p>
+        </div>
+
+        <div class="overview-card">
+            <h3> Job Tracking </h3>
+            <p>
+                Monitor applications, interviews and job offers from your dashboard.
+            </p>
+        </div>
+
+        <div class="overview-card">
+            <h3> Community Access </h3>
+            <p>
+                Share opportunities and help others discover career openings.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="profile-footer">
+        <p class="footer-text">
+            Keeping your profile updated helps you manage applications more efficiently.
+        </p>
+    </div>
+
+</div>
+
+<script src="../script/storage.js"></script>
+<script src="../script/profile.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>
