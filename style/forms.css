@@ -1,162 +1,164 @@
 /* forms.css */
 
 .auth-page{
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-margin-left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin-left:0;
+    padding:40px 20px;
 }
 
 .login-container,
 .register-container,
 .profile-card,
 .job-form{
-background:#fff;
-padding:30px;
-border-radius:16px;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 
 .login-container,
 .register-container{
-width:450px;
+    width:100%;
+    max-width:720px;
 }
 
 .auth-header{
-text-align:center;
-margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .auth-form,
 .profile-form,
 .job-form{
-display:flex;
-flex-direction:column;
-gap:15px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
 .input-box,
 .job-form input,
 .job-form textarea{
-width:100%;
-padding:14px;
-border:1px solid #d1d5db;
-border-radius:10px;
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
 }
 
 .submit-btn{
-border:none;
-cursor:pointer;
-padding:14px;
-border-radius:10px;
-background:#2563eb;
-color:#fff;
-font-weight:600;
+    border:none;
+    cursor:pointer;
+    padding:14px;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
 }
 
 .redirect-text{
-text-align:center;
-margin-top:20px;
+    text-align:center;
+    margin-top:20px;
 }
 
 .redirect-link{
-color:#2563eb;
-font-weight:600;
+    color:#2563eb;
+    font-weight:600;
 }
 
 .auth-text{
-text-align:center;
-color:#6b7280;
-margin-bottom:20px;
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:20px;
+    line-height:1.8;
 }
 
 .auth-info{
-margin-top:20px;
+    margin-top:20px;
 }
 
 .info-item{
-padding:8px 0;
+    padding:8px 0;
 }
 
-/* pages.css */
+/* Dashboard / Cards */
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-bottom:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:25px;
 }
 
 .card,
 .overview-card,
 .info-card{
-background:#fff;
-border-radius:16px;
-padding:20px;
-box-shadow:0 3px 12px rgba(0,0,0,0.06);
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.06);
 }
 
 .card{
-display:flex;
-justify-content:space-between;
-align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .contim{
-width:60px;
+    width:60px;
 }
 
 .card-info h3{
-margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 .card-info p{
-font-size:28px;
-font-weight:700;
+    font-size:28px;
+    font-weight:700;
 }
 
 .chart-card,
 .recent-applications,
 .jobs-container,
 .applications-container{
-background:#fff;
-padding:20px;
-border-radius:16px;
-margin-top:20px;
-box-shadow:0 3px 12px rgba(0,0,0,0.06);
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    margin-top:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.06);
 }
 
 .profile-card{
-max-width:700px;
+    max-width:700px;
 }
 
 .profile-img{
-width:120px;
-display:block;
-margin:auto;
-margin-bottom:15px;
+    width:120px;
+    display:block;
+    margin:auto;
+    margin-bottom:15px;
 }
 
 .profile-card h2,
 .profile-card p{
-text-align:center;
-margin-bottom:10px;
+    text-align:center;
+    margin-bottom:10px;
 }
 
 .quick-info,
 .info-section,
 .overview-section,
 .dashboard-overview{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-bottom:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:25px;
 }
 
 .footer-text,
 .section-text,
 .chart-description{
-color:#6b7280;
-margin-top:8px;
+    color:#6b7280;
+    margin-top:8px;
 }

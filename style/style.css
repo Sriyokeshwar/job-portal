@@ -31,12 +31,19 @@ ul{
     padding:100px 40px;
     text-align:center;
     border-radius:24px;
-    background:linear-gradient(135deg,#4f46e5,#7c3aed,#2563eb);
+    background:linear-gradient(180deg,#4f46e5,#7126f0,#4f46e5,#7c3aed,#2563eb);
     color:#fff;
+    transition:0.3s;
     margin-bottom:30px;
-    box-shadow:0 15px 40px rgba(79,70,229,0.25);
+    box-shadow:0 15px 40px rgba(78, 70, 229, 0.381);
 }
-
+.hero-section:hover{
+    box-shadow:0 20px 60px rgba(78, 20, 129, 0.564);
+     backdrop-filter: blur(100px); /* Smoothly transitions to 10px blur */
+  -webkit-backdrop-filter: blur(100px);
+    scale:1.02;
+    transition:0.3s;
+}
 .hero-title{
     font-size:64px;
     margin-bottom:20px;
@@ -65,7 +72,7 @@ ul{
     position:fixed;
     top:0;
     left:0;
-    background:linear-gradient(35deg,rgba(117, 7, 235, 0.4),rgba(11, 191, 241, 0.5));
+    background:linear-gradient(10deg,rgba(11, 191, 241, 0.673),rgba(57, 95, 238, 0.5),rgba(117, 7, 235, 0.599));
     border-right:1px solid #e5e7eb;
     overflow-y:auto;
 }
@@ -110,6 +117,9 @@ ul{
     color:#ffffff;
     font-weight:600;
 }
+.logout-btn:hover {
+  background: radial-gradient(ellipse, #f01f1f, rgb(255, 103, 2), #f50303);
+}
 
 .logo-container{
     display:flex;
@@ -126,11 +136,11 @@ ul{
 }
 
 .logo{
-    font-size:40px;
+    font-size:35px;
     font-family:'Bebas Neue',sans-serif;
     font-weight:400;
     text-transform:uppercase;
-    letter-spacing:1px;
+    letter-spacing:5px;
     background:linear-gradient(to right,#7308e6,#fe04e1,#f29203,#7308e6);
     background-size:200% auto;
     -webkit-background-clip:text;
@@ -145,10 +155,18 @@ ul{
 @keyframes gradientAnimation{
     0%{
         background-position:0% center;
+        transform:scaleY(1.5);
+        transition:0.3s;
+    }
+    50%{
+        transform:scaleY(1.1);
+        transition:0.3s;
     }
 
     100%{
         background-position:200% center;
+        transform:scaleY(1.4);
+        transition:0.3s;
     }
 }
 
@@ -171,10 +189,9 @@ ul{
 }
 .search{
     width:320px;
-    padding:12px;
+    padding:20px 10px;
     border:1px solid #d1d5db;
     border-radius:10px;
-    padding:20px 10px;  
     outline:none;
 }
 
@@ -209,50 +226,6 @@ ul{
 .page-subtitle{
     color:#6b7280;
     line-height:1.7;
-}
-
-/* Auth Pages */
-
-.auth-page{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:40px 20px;
-}
-
-.register-container,
-.login-container{
-    width:100%;
-    max-width:720px;
-    background:#fff;
-    border-radius:24px;
-    padding:35px;
-    box-shadow:0 15px 50px rgba(0,0,0,0.08);
-}
-
-.auth-header{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.auth-header .logoim{
-    width:90px;
-    height:90px;
-    border-radius:20px;
-    margin-bottom:10px;
-}
-
-.auth-text{
-    text-align:center;
-    color:#6b7280;
-    margin-bottom:25px;
-    line-height:1.8;
-}
-
-.auth-form{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
 }
 
 /* Form Fields */
@@ -385,6 +358,7 @@ input[type="file"]{
         #7c3aed,
         #2563eb
     );
+    /* transition:all 0.1s ease; */
     background-size:300% 300%;
     animation:gradientBtn 5s ease infinite;
 }
@@ -438,8 +412,10 @@ input[type="file"]{
 button:hover,
 .submit-btn:hover{
     transform:translateY(-2px);
+    scale:1.07;
     transition:0.3s;
-    box-shadow:0 4px 15px rgba(114, 5, 247, 0.411);
+    box-shadow:4px 4px 10px 1px rgb(5, 61, 247);
+    background:radial-gradient(ellipse at center, #4f46e5, #7c3aed, #2563eb);
 }
 
 /*Landing page*/
