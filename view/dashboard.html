@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="Dashboard - Manage your shared jobs, review active applications, and track career success rates.">
     <title>Dashboard | JobFlow Job Portal</title>
     <link rel="icon" href="../assets/icons/icon.png">
 
     <!-- Design System Stylesheets -->
+=======
+    <title>Dashboard | JobFlow</title>
+
+    <link rel="icon" href="../assets/icons/icon.png">
+
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/forms.css">
     <link rel="stylesheet" href="../style/pages.css">
@@ -16,6 +23,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="dashboard-layout">
 
     <!-- Sidebar Navigation Drawer -->
@@ -168,6 +176,194 @@
 <!-- Project Scripts -->
 <script src="../script/api.js"></script>
 <script src="../script/auth.js"></script>
+=======
+<div class="sidebar">
+
+    <div class="logo-container">
+
+        <img src="../assets/icons/logo.png" alt="Logo" class="logoim">
+
+        <h2 class="logo">JobFlow</h2>
+
+        <div class="menu-btn" id="menuBtn">
+            ☰
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+
+        <ul>
+
+            <li>
+                <a href="./dashboard.html" class="active-link">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html">
+                    Jobs
+                </a>
+            </li>
+
+            <li>
+                <a href="./add-job.html">
+                    Add Job
+                </a>
+            </li>
+
+            <li>
+                <a href="./applications.html">
+                    Applications
+                </a>
+            </li>
+
+            <li>
+                <a href="./profile.html">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <button onclick="logout()" class="logout-btn">
+                    Logout
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+<div class="main-content">
+
+    <div class="topbar">
+
+        <form class="search-box">
+
+            <input
+            type="text"
+            id="searchInput"
+            class="search"
+            placeholder="Search jobs">
+
+            <button
+            type="submit"
+            class="search-btn">
+                🔍
+            </button>
+
+        </form>
+
+        <button
+        id="themeToggleBtn"
+        class="theme-btn">
+            🌙
+        </button>
+
+    </div>
+
+    <div class="dashboard-header">
+
+        <h1 class="page-title">
+            Welcome,
+            <span id="loggedUserName">
+                User
+            </span>
+        </h1>
+
+        <p class="dashboard-subtitle">
+            Track your jobs, applications and career progress from one place
+        </p>
+
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-info">
+                <h3>Jobs Shared</h3>
+                <p id="jobsSharedCount">
+                    0
+                </p>
+            </div>
+            <img src="../assets/images/job.png" alt="Jobs" class="contim">
+
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <h3>Jobs Applied</h3>
+                <p id="jobsAppliedCount"> 0 </p>
+            </div>
+            <img src="../assets/images/applied.png" alt="Applied" class="contim">
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <h3>Interviews</h3>
+                <p id="interviewCount"> 0 </p>
+            </div>
+            <img src="../assets/images/interview.png" alt="Interview" class="contim">
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <h3>Selected</h3>
+                <p id="selectedCount"> 0 </p>
+            </div>
+            <img src="../assets/images/offer.png" alt="Offer" class="contim">
+        </div>
+    </div>
+
+    <div class="dashboard-overview">
+        <div class="overview-card">
+            <h3>Career Insights</h3>
+            <p> Get a quick overview of your job search performance and progress. </p>
+        </div>
+
+        <div class="overview-card">
+            <h3>Application Tracking</h3>
+            <p> Monitor every application and stay updated on status changes.</p>
+        </div>
+
+        <div class="overview-card">
+            <h3>Community Growth</h3>
+            <p> Share opportunities and help others discover their next role. </p>
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h2> Application Status Overview </h2>
+        <p class="chart-description">
+            Visual representation of your current application journey.
+        </p>
+        <canvas id="statusChart"></canvas>
+    </div>
+
+    <div class="recent-applications">
+        <h2> Recent Activity </h2>
+
+        <p class="section-text">
+            View your latest applications, updates and recruitment activities.
+        </p>
+
+        <div id="recentApplications">
+        </div>
+
+    </div>
+
+    <div class="dashboard-footer">
+        <p class="footer-text">
+            Stay consistent with your applications and keep your profile updated for better opportunities.
+        </p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../script/api.js"></script>
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 <script src="../script/dashboard.js"></script>
 <script src="../script/theme.js"></script>
 <script src="../script/app.js"></script>

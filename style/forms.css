@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* forms.css - Modern form structures and styling */
+=======
+/* forms.css */
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 
 .auth-page{
     display:flex;
@@ -7,13 +11,17 @@
     min-height:100vh;
     margin-left:0;
     padding:40px 20px;
+<<<<<<< HEAD
     background: var(--background);
+=======
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .login-container,
 .register-container,
 .profile-card,
 .job-form{
+<<<<<<< HEAD
     background: var(--card);
     border: 1px solid var(--border);
     padding: 40px;
@@ -27,11 +35,18 @@
 .profile-card:hover,
 .job-form:hover {
     box-shadow: var(--shadow-lg);
+=======
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .login-container,
 .register-container{
     width:100%;
+<<<<<<< HEAD
     max-width:560px;
 }
 
@@ -45,6 +60,13 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 30px;
+=======
+    max-width:720px;
+}
+
+.auth-header{
+    margin-bottom:20px;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .auth-form,
@@ -52,11 +74,16 @@
 .job-form{
     display:flex;
     flex-direction:column;
+<<<<<<< HEAD
     gap:20px;
+=======
+    gap:15px;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .input-box,
 .job-form input,
+<<<<<<< HEAD
 .job-form textarea,
 .job-form select{
     width:100%;
@@ -214,10 +241,28 @@
     cursor:not-allowed;
     transform: none !important;
     box-shadow: none !important;
+=======
+.job-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+}
+
+.submit-btn{
+    border:none;
+    cursor:pointer;
+    padding:14px;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .redirect-text{
     text-align:center;
+<<<<<<< HEAD
     margin-top:24px;
     color: var(--text-secondary);
     font-size: 14px;
@@ -232,10 +277,19 @@
 .redirect-link:hover {
     color: var(--secondary);
     text-decoration: underline;
+=======
+    margin-top:20px;
+}
+
+.redirect-link{
+    color:#2563eb;
+    font-weight:600;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }
 
 .auth-text{
     text-align:center;
+<<<<<<< HEAD
     color: var(--text-secondary);
     margin-bottom:30px;
     font-size: 15px;
@@ -284,4 +338,99 @@
 
 .error-message:empty{
     display:none;
+=======
+    color:#6b7280;
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+.auth-info{
+    margin-top:20px;
+}
+
+.info-item{
+    padding:8px 0;
+}
+
+/* Dashboard / Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.card,
+.overview-card,
+.info-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.06);
+}
+
+.card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.contim{
+    width:60px;
+}
+
+.card-info h3{
+    margin-bottom:10px;
+}
+
+.card-info p{
+    font-size:28px;
+    font-weight:700;
+}
+
+.chart-card,
+.recent-applications,
+.jobs-container,
+.applications-container{
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    margin-top:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.06);
+}
+
+.profile-card{
+    max-width:700px;
+}
+
+.profile-img{
+    width:120px;
+    display:block;
+    margin:auto;
+    margin-bottom:15px;
+}
+
+.profile-card h2,
+.profile-card p{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.quick-info,
+.info-section,
+.overview-section,
+.dashboard-overview{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.footer-text,
+.section-text,
+.chart-description{
+    color:#6b7280;
+    margin-top:8px;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
 }

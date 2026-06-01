@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* responsive.css - Premium responsiveness system */
 
 @media (max-width: 1024px) {
@@ -144,11 +145,154 @@
 
     .logo {
         font-size: 24px;
+=======
+@media (max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        min-height:auto;
+        padding:12px 15px;
+        position:relative;
+    }
+
+    .logo-container{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        margin:0;
+        padding:0;
+    }
+
+    .logoim{
+        width:40px;
+        height:40px;
+    }
+
+    .logo{
+        flex:1;
+        font-size:22px;
+        margin-left:10px;
+    }
+
+    .menu-btn{
+        display:block;
+        font-size:24px;
+        cursor:pointer;
+    }
+
+    #sidebarNav{
+        display:none;
+        margin-top:15px;
+    }
+
+    #sidebarNav.show{
+        display:block;
+    }
+
+    .sidebar ul{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .sidebar li{
+        margin:0;
+    }
+
+    .sidebar a,
+    .logout-btn{
+        width:100%;
+    }
+
+    .main-content{
+        width:100%;
+        margin:0;
+        padding:15px;
+    }
+
+    .topbar{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .search-box{
+        flex:1;
+        display:flex;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    /* HERO */
+
+    .hero-section{
+        padding:60px 20px;
+        text-align:center;
+    }
+
+    .hero-title{
+        font-size:48px;
+        line-height:1.1;
+        margin-bottom:20px;
+    }
+
+    .hero-text{
+        font-size:16px;
+        line-height:1.8;
+        margin-bottom:25px;
+    }
+
+    .hero-actions{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .hero-actions .submit-btn{
+        width:100%;
+        max-width:250px;
+        min-width:unset;
+    }
+
+    /* CARDS */
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .card{
+        min-height:110px;
+    }
+
+    .dashboard-overview,
+    .quick-info,
+    .info-section,
+    .overview-section,
+    .profile-overview{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .overview-card,
+    .info-card{
+        width:100%;
+        margin:0;
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
     }
 
     .login-container,
     .register-container,
     .profile-card,
+<<<<<<< HEAD
     .job-form {
         padding: 20px 14px;
     }
@@ -157,3 +301,58 @@
         margin-bottom: 20px;
     }
 }
+=======
+    .chart-card,
+    .recent-applications{
+        width:100%;
+        padding:18px;
+    }
+
+    .submit-btn{
+        width:100%;
+    }
+
+    .radio-group{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .profile-img{
+        width:100px;
+        height:100px;
+    }
+
+    .page-title,
+    .dashboard-title{
+        font-size:28px;
+    }
+
+    .page-subtitle{
+        font-size:14px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .logoim{
+        width:35px;
+        height:35px;
+    }
+
+    .page-title,
+    .dashboard-title{
+        font-size:24px;
+    }
+
+}
+
+>>>>>>> 42e0657cae51ca6f73b742664e34bef7bf96d9e8
