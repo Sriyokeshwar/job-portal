@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Profile - Manage your professional details, upload profile photos, and customize color schemes.">
+    <title>My Profile | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar Drawer -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li>
+                    <a href="./dashboard.html">
+                        <span>📊 Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./jobs.html">
+                        <span>💼 Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-job.html">
+                        <span>📤 Post a Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./applications.html">
+                        <span>📋 My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="active-link">
+                        <span>👤 My Profile</span>
+                    </a>
+                </li>
+                <li style="margin-top: 20px;">
+                    <button onclick="logout()" class="logout-btn">
+                        <span>👋 Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Workspace Workspace -->
+    <main class="main-content">
+
+        <!-- Top Header Navigation Header -->
+        <header class="topbar">
+            <form class="search-box" action="./jobs.html" method="GET">
+                <input type="text" name="search" class="search" placeholder="Search jobs...">
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
+
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <!-- Header Panel -->
+        <section class="page-header" aria-label="Profile Title">
+            <h1 class="page-title">Profile Settings</h1>
+            <p class="page-subtitle">Manage your personal credentials, customize portal aesthetics, and review account settings.</p>
+        </section>
+
+        <!-- Dynamic Profile Detail Card -->
+        <div class="profile-card glass-panel" style="box-shadow: var(--shadow-lg);">
+            
+            <!-- Editable Profile Photo Widget -->
+            <div style="position: relative; width: 140px; height: 140px; margin: 0 auto 24px;">
+                <img src="../assets/images/user.png" alt="Profile Avatar" class="profile-img" id="profileImage" style="margin: 0; width: 140px; height: 140px; border-width: 5px;">
+                
+                <!-- Overlay trigger camera element -->
+                <label for="profileImageInput" style="position: absolute; bottom: 0; right: 0; background: var(--primary); border: 2px solid var(--card); color: #fff; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: var(--transition);" id="photoUploadTrigger">
+                    📷
+                </label>
+                <input type="file" id="profileImageInput" accept="image/*" hidden>
+            </div>
+
+            <h2 id="profileName" style="text-align: center; color: var(--text); font-weight: 800;">User Name</h2>
+            <div class="profile-status" style="margin-bottom: 30px;">🟢 Active Member</div>
+
+            <!-- Profile read-only display detail grids -->
+            <section class="profile-details" aria-label="Profile Credentials">
+                <div class="profile-detail-item">
+                    <span class="detail-label">📧 Registered Email</span>
+                    <span id="profileEmail" class="detail-value">user@email.com</span>
+                </div>
+
+                <div class="profile-detail-item">
+                    <span class="detail-label">📱 Phone Contact</span>
+                    <span id="profilePhone" class="detail-value">+91 9876543210</span>
+                </div>
+
+                <div class="profile-detail-item">
+                    <span class="detail-label">🎂 Current Age</span>
+                    <span id="profileAge" class="detail-value">21 Years Old</span>
+                </div>
+
+                <div class="profile-detail-item">
+                    <span class="detail-label">⚧ Gender Identity</span>
+                    <span id="profileGender" class="detail-badge">Male</span>
+                </div>
+            </section>
+
+            <!-- Editable profile settings form -->
+            <form id="profileForm" class="profile-form" style="border-top: 1px solid var(--border); padding-top: 30px;">
+                <h3 style="font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 5px;">Update Profile Information</h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="name" class="field-label">Full Name</label>
+                    <input type="text" id="name" class="input-box" placeholder="Full Name" required autocomplete="name">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="email" class="field-label">Email Address (Read-only)</label>
+                    <input type="email" id="email" class="input-box" placeholder="Email Address" required disabled style="opacity: 0.65; cursor: not-allowed;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="phone" class="field-label">Phone Contact (10 digits)</label>
+                    <input type="text" id="phone" class="input-box" placeholder="Phone Number" required autocomplete="tel">
+                </div>
+
+                <!-- Color Accent Theme color picker selection -->
+                <div class="color-group">
+                    <label for="profileColor" class="field-label">🎨 Customize Accent Theme Color</label>
+                    <input type="color" id="profileColor" class="color-picker" value="#2563eb">
+                </div>
+
+                <!-- Age Range slider -->
+                <div class="age-group">
+                    <label for="age" class="field-label">Age Package</label>
+                    <input type="range" id="age" class="age-slider" min="18" max="60" value="21">
+                    <p id="ageValue" class="age-value">Age: 21</p>
+                </div>
+
+                <button type="submit" class="submit-btn" style="margin-top: 10px;">
+                    <span>Save Updates 💾</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Portal Feature Overview Grid -->
+        <section class="profile-overview" aria-label="Portal Capabilities">
+            <article class="overview-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">🔒</div>
+                <h3>Secure Credentials</h3>
+                <p>Verify registration credentials to ensure smooth applications tracking.</p>
+            </article>
+
+            <article class="overview-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">🎨</div>
+                <h3>Accent Themes</h3>
+                <p>Customize your profile card colors to reflect your personalized SaaS branding.</p>
+            </article>
+
+            <article class="overview-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">🌎</div>
+                <h3>Mentorship Access</h3>
+                <p>Mentor circles will view your active profile when reviewing uploaded posts.</p>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer class="profile-footer">
+            <p class="footer-text">
+                Ensure contact details are kept up to date so recruitment circles can reach you!
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- Project Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/profile.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>

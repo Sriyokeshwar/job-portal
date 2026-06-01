@@ -1,0 +1,159 @@
+/* responsive.css - Premium responsiveness system */
+
+@media (max-width: 1024px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px 16px;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        overflow: visible;
+    }
+
+    .logo-container {
+        padding: 16px 20px;
+        justify-content: space-between;
+    }
+
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        background: var(--background);
+        border: 1px solid var(--border);
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--text);
+        transition: var(--transition);
+    }
+
+    .menu-btn:hover {
+        background: var(--primary-light);
+        color: var(--primary);
+    }
+
+    #sidebarNav {
+        display: none;
+        padding: 0 0 16px 0;
+    }
+
+    #sidebarNav.show {
+        display: block;
+        animation: slideDown 0.25s ease-out;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .sidebar ul {
+        padding: 0 16px 8px;
+    }
+
+    .profile-overview {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-box {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .submit-btn {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info,
+    .info-section,
+    .overview-section,
+    .dashboard-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-filter-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .jobs-filter-item {
+        width: 100%;
+    }
+
+    .applications-container {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 26px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .login-container,
+    .register-container,
+    .profile-card,
+    .job-form {
+        padding: 20px 14px;
+    }
+
+    .topbar {
+        margin-bottom: 20px;
+    }
+}

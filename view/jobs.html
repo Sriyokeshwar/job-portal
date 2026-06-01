@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Jobs - Find community vetted job openings, filter by salary/location, and save jobs instantly.">
+    <title>Browse Jobs | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li>
+                    <a href="./dashboard.html">
+                        <span>📊 Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./jobs.html" class="active-link">
+                        <span>💼 Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-job.html">
+                        <span>📤 Post a Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./applications.html">
+                        <span>📋 My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <span>👤 My Profile</span>
+                    </a>
+                </li>
+                <li style="margin-top: 20px;">
+                    <button onclick="logout()" class="logout-btn">
+                        <span>👋 Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Workspace Area -->
+    <main class="main-content">
+
+        <!-- Top Header Navigation Header -->
+        <header class="topbar">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search" placeholder="Search by title, company or location...">
+                <button type="button" id="searchBtn" class="search-btn" aria-label="Submit Search">🔍</button>
+            </div>
+
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <!-- Header Panel -->
+        <section class="page-header" aria-label="Browse Title">
+            <h1 class="page-title">Career Opportunities</h1>
+            <p class="page-subtitle">Apply for active roles shared directly by members of the community.</p>
+        </section>
+
+        
+
+        <!-- Dynamic Jobs Grid Layout -->
+        <div id="jobsContainer" class="jobs-container">
+            <!-- Loaded dynamically by script/job-list.js -->
+            <div class="skeleton" style="height: 250px;"></div>
+            <div class="skeleton" style="height: 250px;"></div>
+            <div class="skeleton" style="height: 250px;"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="jobs-footer">
+            <p class="footer-text">
+                Can't find a role? Help others by posting vacancies using the <a href="./add-job.html" style="color:var(--primary);font-weight:600;">Post a Job</a> portal!
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- Modal confirm dialog container (replaces cheap alerts) -->
+<div id="confirmModal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+    <div class="overview-card" style="width: 100%; max-width: 440px; margin: 20px; padding: 30px; border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-lg);">
+        <h3 id="modalTitle" style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text);">Confirm Submission</h3>
+        <p id="modalMsg" style="color: var(--text-secondary); margin-bottom: 24px; font-size: 14px; line-height: 1.6;">Are you sure you want to apply for this job opening?</p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+            <button id="modalCancelBtn" class="submit-btn" style="background: var(--background); color: var(--text); border: 1px solid var(--border);">Cancel</button>
+            <button id="modalConfirmBtn" class="submit-btn">Apply Now 🚀</button>
+        </div>
+    </div>
+</div>
+
+<!-- Project Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/job-list.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>

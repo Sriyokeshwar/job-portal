@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "name": "sriven",
+      "email": "sriyokeshwar4753@gmail.com",
+      "phone": "7978887878",
+      "age": "30",
+      "color": "#3498db",
+      "gender": "Male",
+      "password": "123456",
+      "profileImage": "data:image/png;base64,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",
+      "id": "zPc7Gq4XjD8"
+    },
+    {
+      "name": "Sriyokeshwar",
+      "email": "sriyokeshwar475@gmail.com",
+      "phone": "7894561255",
+      "age": "21",
+      "color": "#59eb24",
+      "gender": "Male",
+      "password": "123456789",
+      "profileImage": "data:image/png;base64,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",
+      "savedJobs": [],
+      "id": "-PyH8cZSPO0"
+    },
+    {
+      "name": "sri",
+      "email": "sri@gmai.com",
+      "phone": "4684654687",
+      "age": "21",
+      "color": "#2563eb",
+      "gender": "Male",
+      "password": "Sri@2222",
+      "profileImage": "",
+      "savedJobs": [],
+      "id": "b-a0kl0VSQk"
+    }
+  ],
+  "jobs": [
+    {
+      "company": "google",
+      "jobTitle": "fds dev",
+      "location": "chenai",
+      "salary": "100000",
+      "applyLink": "https://www.google.com/?zx=1780249589340",
+      "description": "for dev front end",
+      "postedBy": "sriven",
+      "userId": "zPc7Gq4XjD8",
+      "postedDate": "31/05/2026",
+      "id": "nr7c7XSSr14"
+    },
+    {
+      "company": "apple",
+      "jobTitle": "backend",
+      "location": "pune",
+      "salary": "30000",
+      "applyLink": "https://www.microsoft.com/en-in",
+      "description": "working criteria",
+      "postedBy": "sriven",
+      "userId": "zPc7Gq4XjD8",
+      "postedDate": "31/05/2026",
+      "id": "bFmALfna4pU"
+    },
+    {
+      "company": "google",
+      "jobTitle": "aaaa",
+      "location": "DDDDDD",
+      "salary": "3543",
+      "applyLink": "https://www.microsoft.com/en-in",
+      "description": "https://www.microsoft.com/en-in",
+      "postedBy": "Sriyokeshwar",
+      "userId": "-PyH8cZSPO0",
+      "postedDate": "01/06/2026",
+      "id": "_pGHdevD_Ws"
+    }
+  ],
+  "applications": [
+    {
+      "userId": "zPc7Gq4XjD8",
+      "jobId": "nr7c7XSSr14",
+      "company": "google",
+      "jobTitle": "fds dev",
+      "status": "Applied",
+      "appliedDate": "31/05/2026",
+      "id": "RVIp2f3wWu4"
+    },
+    {
+      "userId": "-PyH8cZSPO0",
+      "jobId": "_pGHdevD_Ws",
+      "company": "google",
+      "jobTitle": "aaaa",
+      "status": "Applied",
+      "appliedDate": "01/06/2026",
+      "id": "qnjy8eSSMPA"
+    },
+    {
+      "userId": "-PyH8cZSPO0",
+      "jobId": "bFmALfna4pU",
+      "company": "apple",
+      "jobTitle": "backend",
+      "status": "Applied",
+      "appliedDate": "01/06/2026",
+      "id": "jAFOwxieFjk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JobFlow - The leading community-driven job portal to find, share, and track job applications in real time.">
+    <meta name="keywords" content="Job search, tracking jobs, community job portal, career builder, apply online">
+    <title>JobFlow | Find, Share & Track Jobs</title>
+    <link rel="icon" href="./assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/forms.css">
+    <link rel="stylesheet" href="./style/pages.css">
+    <link rel="stylesheet" href="./style/themes.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+<body class="landing-body">
+
+<div class="landing-page">
+
+    <!-- Header / Topbar Navigation -->
+    <header class="topbar glass-panel" style="padding: 15px 30px; border-radius: var(--radius-lg); margin-top: 15px;">
+        <div class="logo-container" style="padding: 0;">
+            <img src="./assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content Hero Banner -->
+    <main>
+        <section class="hero-section">
+            <h1 class="hero-title">
+                Find, Share & Track Jobs
+            </h1>
+
+            <p class="hero-text">
+                A community-driven job portal where users can discover career opportunities,
+                share verified openings, and track applications dynamically from one single elegant dashboard.
+            </p>
+
+            <div class="hero-actions" id="landingActions">
+                <!-- Fallback actions for guests, will be updated dynamically if logged in -->
+                <a href="./view/register.html" class="submit-btn" id="btnGetStarted">
+                    Get Started 🚀
+                </a>
+
+                <a href="./view/login.html" class="submit-btn" id="btnLogin" style="background: var(--card); color: var(--primary); border: 1px solid var(--border);">
+                    Login 🔑
+                </a>
+            </div>
+        </section>
+
+        <!-- Feature Grid Section -->
+        <section class="quick-info" aria-label="Portal Statistics">
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">💼</div>
+                <h3>100+ Jobs</h3>
+                <p>High-quality, community-vetted roles and positions shared daily.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">👥</div>
+                <h3>Active Network</h3>
+                <p>Growing ecosystem of dedicated professionals and job seekers.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">📈</div>
+                <h3>Track Progress</h3>
+                <p>Visually monitor the exact status of all your applications in one grid.</p>
+            </article>
+        </section>
+
+        <section class="quick-info" aria-label="Portal Capabilities">
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">🔍</div>
+                <h3>Discover Roles</h3>
+                <p>Advanced real-time search and filter tools across different companies and locations.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">📤</div>
+                <h3>Share Opportunities</h3>
+                <p>Contribute to professional success by sharing active listings and open roles.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 32px; margin-bottom: 12px;">🎯</div>
+                <h3>Stay Organized</h3>
+                <p>Ditch cluttered spreadsheets. Visualize interviews and offers dynamically.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p class="footer-text">
+            © 2026 JobFlow. Designed for community growth and career advancement.
+        </p>
+    </footer>
+
+</div>
+
+<!-- Core Scripts -->
+<script src="./script/api.js"></script>
+<script src="./script/theme.js"></script>
+<script src="./script/app.js"></script>
+
+<!-- Dynamic Authentication State Checking -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const user = sessionStorage.getItem("currentUser");
+    const actionsContainer = document.getElementById("landingActions");
+
+    if (user && actionsContainer) {
+        const parsedUser = JSON.parse(user);
+        actionsContainer.innerHTML = `
+            <a href="./view/dashboard.html" class="submit-btn">
+                Go to Dashboard 📊
+            </a>
+            <button onclick="handleLandingLogout()" class="submit-btn" style="background: var(--danger-light); color: var(--danger); border: 1px solid var(--danger-light);">
+                Logout 👋
+            </button>
+        `;
+    }
+});
+
+function handleLandingLogout() {
+    sessionStorage.removeItem("currentUser");
+    showNotification("Logged out successfully", "info");
+    setTimeout(() => {
+        location.reload();
+    }, 800);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Applications - Track the real-time status of your job applications with a visual progress timeline.">
+    <title>My Applications | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li>
+                    <a href="./dashboard.html">
+                        <span>📊 Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./jobs.html">
+                        <span>💼 Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-job.html">
+                        <span>📤 Post a Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./applications.html" class="active-link">
+                        <span>📋 My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <span>👤 My Profile</span>
+                    </a>
+                </li>
+                <li style="margin-top: 20px;">
+                    <button onclick="logout()" class="logout-btn">
+                        <span>👋 Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Workspace Area -->
+    <main class="main-content">
+
+        <!-- Top Header Navigation Header -->
+        <header class="topbar">
+            <div class="search-box">
+                <input type="text" id="applicationSearch" class="search" placeholder="Search applications by title or company...">
+                <button type="button" class="search-btn" aria-label="Submit Search">🔍</button>
+            </div>
+
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <!-- Header Panel -->
+        <section class="page-header" aria-label="Applications Title">
+            <h1 class="page-title">My Applications</h1>
+            <p class="page-subtitle">Track, monitor, and update the status of your submitted job applications.</p>
+        </section>
+
+        <!-- Dynamic Status Filter Panel -->
+        <section class="jobs-filter-panel" style="margin-bottom: 30px;" aria-label="Filter Options">
+            <div class="jobs-filter-item" style="flex: 2;">
+                <label for="filterStatus" class="field-label" style="font-size: 13px;">Filter by Status</label>
+                <select id="filterStatus" class="input-box" style="padding: 10px 14px;">
+                    <option value="all">All Statuses</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Applications List Container -->
+        <div id="applicationsContainer" class="applications-container">
+            <!-- Loaded dynamically by script/applications.js -->
+            <div class="skeleton" style="height: 180px;"></div>
+            <div class="skeleton" style="height: 180px; margin-top: 20px;"></div>
+        </div>
+
+        <footer class="page-footer">
+            <p class="footer-text">
+                Need to add more? Head to the <a href="./jobs.html" style="color:var(--primary);font-weight:600;">Browse Jobs</a> page and start sending out applications!
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- Project Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/applications.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>

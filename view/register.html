@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a new JobFlow account and start sharing, discovering, and tracking job openings within minutes.">
+    <title>Register | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<main class="main-content auth-page">
+
+    <div class="register-container glass-panel">
+
+        <header class="auth-header">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h1 class="logo">JobFlow</h1>
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <h2 class="page-title" style="text-align: center; margin-bottom: 8px;">Create Account</h2>
+        <p class="auth-text">
+            Join JobFlow's growing community to share open roles, discover vacancies, and monitor applications efficiently.
+        </p>
+
+        <form id="registerForm" class="auth-form" novalidate>
+            
+            <!-- Profile Photo Upload -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <label for="profileImage" class="upload-btn" style="width: 100%; text-align: center;">
+                    📷 Click to Upload Profile Picture
+                </label>
+                <input type="file" id="profileImage" accept="image/*" hidden>
+                <p id="fileName" class="file-name" style="margin-top: 4px;">No photo selected</p>
+                <small id="imageError"  class="error-message"></small>
+            </div>
+
+            <!-- Full Name -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="name" class="field-label">👤 Full Name</label>
+                <input type="text" id="name" class="input-box" placeholder="Karthik Raj" required autocomplete="name">
+                <small id="nameError" class="error-message"></small>
+            </div>
+
+            <!-- Email Address -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="email" class="field-label">📧 Email Address</label>
+                <input type="email" id="email" class="input-box" placeholder="karthik@example.com" required autocomplete="email">
+                <small id="emailError" class="error-message"></small>   
+            </div>
+
+            <!-- Phone Number -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="phone" class="field-label">📱 Phone Number (10 digits)</label>
+                <input type="tel" id="phone" class="input-box" placeholder="9876543210" required autocomplete="tel">
+                <small id="phoneError" class="error-message"></small>
+            </div>
+
+            <!-- Age Range Slider -->
+            <div class="age-group">
+                <label for="age" class="field-label">🎂 Age</label>
+                <input type="range" id="age" class="age-slider" min="18" max="60" value="21">
+                <p id="ageValue" class="age-value">Age: 21</p>
+            </div>
+
+            <!-- Profile Theme Color Picker -->
+            <div class="color-group">
+                <label for="profileColor" class="field-label">🎨 Profile Primary Color Theme</label>
+                <input type="color" id="profileColor" class="color-picker" value="#2563eb">
+            </div>
+            
+            <!-- Password Field -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="password" class="field-label">
+                    🔒 Password
+                </label>
+
+                <input type="password"
+                    id="password"
+                    class="input-box"
+                    placeholder="JobFlow@123"
+                    required
+                    autocomplete="new-password">
+
+                <small id="passwordError" class="error-message"></small>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="confirmPassword" class="field-label">🔐 Confirm Password</label>
+                <input type="password" id="confirmPassword" class="input-box" placeholder="••••••••" required autocomplete="new-password">
+                <small id="confirmPasswordError" class="error-message"></small>
+            </div>
+            
+            <!-- Gender Selector -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label class="field-label">⚧ Gender Identity</label>
+                <div class="gender-group">
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male" required>
+                            <span>Male</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            <span>Female</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                    <small id="genderError" class="error-message"></small>
+                </div>
+            </div>
+
+            <!-- Terms Confirmation Checkbox -->
+            <div class="terms-box">
+                <label>
+                    <input type="checkbox" id="agreeTerms" required>
+                    <span>I confirm that all information provided is accurate and I agree to follow JobFlow community guidelines and terms of use.</span>
+                </label>
+            </div>
+
+            <!-- Submit Registration Button -->
+            <button type="submit" id="registerBtn" class="submit-btn" disabled>
+                <span>🚀 Create My Account</span>
+            </button>
+
+        </form>
+
+        <section class="auth-info" aria-label="Benefits Summary">
+            <div class="info-item">🚀 Discover verified opportunities shared by active professionals</div>
+            <div class="info-item">📋 Easily track and manage your interviews and job progress</div>
+        </section>
+
+        <p class="redirect-text">
+            Already have an account?
+            <a href="./login.html" class="redirect-link">Login Here</a>
+        </p>
+
+        <p class="redirect-text">
+            <a href="../index.html" class="redirect-link" style="color: var(--text-secondary); font-weight: 500;">← Back to Home</a>
+        </p>
+
+    </div>
+
+</main>
+
+<!-- Core Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/theme.js"></script>
+
+<!-- Inline script for dynamic form interactions -->
+<script>
+const agreeTerms = document.getElementById("agreeTerms");
+const registerBtn = document.getElementById("registerBtn");
+const profileImage = document.getElementById("profileImage");
+const fileName = document.getElementById("fileName");
+const ageSlider = document.getElementById("age");
+const ageValue = document.getElementById("ageValue");
+
+ageSlider.addEventListener("input", () => {
+    ageValue.textContent = "Age: " + ageSlider.value;
+});
+
+agreeTerms.addEventListener("change", () => {
+    registerBtn.disabled = !agreeTerms.checked;
+});
+
+profileImage.addEventListener("change", () => {
+    if (profileImage.files.length > 0) {
+        fileName.textContent = profileImage.files[0].name;
+    } else {
+        fileName.textContent = "No photo selected";
+    }
+});
+</script>
+
+</body>
+</html>

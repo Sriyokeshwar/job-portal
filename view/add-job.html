@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share Job - Share active employment listings and contribute to community growth.">
+    <title>Post a Job | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+    
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li>
+                    <a href="./dashboard.html">
+                        <span>📊 Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./jobs.html">
+                        <span>💼 Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-job.html" class="active-link">
+                        <span>📤 Post a Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./applications.html">
+                        <span>📋 My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <span>👤 My Profile</span>
+                    </a>
+                </li>
+                <li style="margin-top: 20px;">
+                    <button onclick="logout()" class="logout-btn">
+                        <span>👋 Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Workspace Workspace -->
+    <main class="main-content">
+
+        <!-- Top Header Navigation Header -->
+        <header class="topbar">
+            <form class="search-box" action="./jobs.html" method="GET">
+                <input type="text" name="search" class="search" placeholder="Search jobs...">
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
+
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <!-- Header Panel -->
+        <section class="page-header" aria-label="Post Job Title">
+            <h1 class="page-title">Share Job Opportunity</h1>
+            <p class="page-subtitle">Support professional development by posting active vacancies and verified listings.</p>
+        </section>
+
+        <!-- Information Cards -->
+        <section class="info-section" aria-label="Portal Guidelines">
+            <article class="info-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">🤝</div>
+                <h3>Empower Professionals</h3>
+                <p>Post verified opportunities and help community seekers discover their dream career path.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">⚡</div>
+                <h3>Instant Availability</h3>
+                <p>Submitted listings publish immediately, ensuring real-time visibility across the Browse page.</p>
+            </article>
+
+            <article class="info-card">
+                <div style="font-size: 28px; margin-bottom: 8px;">🛡️</div>
+                <h3>Verified listings</h3>
+                <p>Ensure salary, location, description, and apply links are accurate to attract qualified candidates.</p>
+            </article>
+        </section>
+
+        <!-- Dynamic Share Job Form -->
+        <form id="jobForm" class="job-form glass-panel" style="box-shadow: var(--shadow-lg);">
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 5px;">Job Specifications Form</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="company" class="field-label">Company Name</label>
+                <input type="text" class="input-box" id="company" placeholder="e.g. Google India" required autocomplete="organization">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="jobTitle" class="field-label">Job Title / Designation</label>
+                <input type="text" class="input-box" id="jobTitle" placeholder="e.g. Associate Front End Engineer" required autocomplete="organization-title">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="location" class="field-label">Office Location</label>
+                <input type="text" class="input-box" id="location" placeholder="e.g. Bangalore, Karnataka (Hybrid)" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="salary" class="field-label">Salary Package (LPA / Per Annum)</label>
+                <input type="text" class="input-box" id="salary" placeholder="e.g. 800000" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="applyLink" class="field-label">External Application Link</label>
+                <input type="url" class="input-box" id="applyLink" placeholder="https://careers.google.com/jobs/..." required autocomplete="url">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <label for="description" class="field-label">Brief Job Description</label>
+                <textarea class="input-box" id="description" rows="6" placeholder="Describe candidate requirements, key roles, and necessary experience profile..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" style="margin-top: 10px;">
+                <span>Share Active Job 📤</span>
+            </button>
+        </form>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p class="footer-text">
+                Please double check descriptions and links prior to submission to ensure database consistency.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- Project Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/jobs.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>

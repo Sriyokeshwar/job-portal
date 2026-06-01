@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard - Manage your shared jobs, review active applications, and track career success rates.">
+    <title>Dashboard | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+
+    <!-- Design System Stylesheets -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h2 class="logo">JobFlow</h2>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li>
+                    <a href="./dashboard.html" class="active-link">
+                        <span>📊 Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./jobs.html">
+                        <span>💼 Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-job.html">
+                        <span>📤 Post a Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./applications.html">
+                        <span>📋 My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <span>👤 My Profile</span>
+                    </a>
+                </li>
+                <li style="margin-top: 20px;">
+                    <button onclick="logout()" class="logout-btn">
+                        <span>👋 Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Workspace -->
+    <main class="main-content">
+
+        <!-- Top Header Navigation Header -->
+        <header class="topbar">
+            <!-- Search redirects to Jobs page with query -->
+            <form class="search-box" id="dashboardSearchForm" action="./jobs.html" method="GET">
+                <input
+                    type="text"
+                    name="search"
+                    id="searchInput"
+                    class="search"
+                    placeholder="Search jobs...">
+                <button type="submit" class="search-btn" aria-label="Submit Search">🔍</button>
+            </form>
+
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+        </header>
+
+        <!-- Dynamic User Greeting Section -->
+        <section class="dashboard-header" aria-label="Greeting Header">
+            <h1 class="page-title">
+                Welcome Back, <span id="loggedUserName">Professional</span> 👋
+            </h1>
+            <p class="dashboard-subtitle">
+                Track your active job applications, share verified opportunities, and monitor your career progress.
+            </p>
+        </section>
+
+        <!-- Metrics Overview Grid Cards (With Skeletons) -->
+        <section class="cards" aria-label="Quick Stats">
+            <article class="card">
+                <div class="card-info">
+                    <h3>Jobs Shared</h3>
+                    <p id="totalJobs">0</p>
+                </div>
+                <img src="../assets/images/job.png" alt="Jobs Shared" class="contim">
+            </article>
+
+            <article class="card">
+                <div class="card-info">
+                    <h3>Total Applications</h3>
+                    <p id="totalApplications">0</p>
+                </div>
+                <img src="../assets/images/applied.png" alt="Applications" class="contim">
+            </article>
+
+            <article class="card">
+                <div class="card-info">
+                    <h3>Applied Status</h3>
+                    <p id="totalApplied">0</p>
+                </div>
+                <img src="../assets/images/applied.png" alt="Applied Status" class="contim">
+            </article>
+
+            <article class="card">
+                <div class="card-info">
+                    <h3>Interviews Schedualed</h3>
+                    <p id="totalInterviews">0</p>
+                </div>
+                <img src="../assets/images/interview.png" alt="Interviews" class="contim">
+            </article>
+
+            <article class="card">
+                <div class="card-info">
+                    <h3>Offers Received</h3>
+                    <p id="totalOffers">0</p>
+                </div>
+                <img src="../assets/images/offer.png" alt="Offers" class="contim">
+            </article>
+
+            <article class="card">
+                <div class="card-info">
+                    <h3>Rejected Applications</h3>
+                    <p id="totalRejected">0</p>
+                </div>
+                <img src="../assets/images/rejected.png" alt="Rejected" class="contim">
+            </article>
+        </section>
+
+        <!-- Recent Activity Feed -->
+        <section class="overview-card" style="margin-bottom: 40px;" aria-label="Recent Activity">
+            <h3>Recent Portal Activity</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">Chronological timeline of your latest application updates and shared job roles.</p>
+            
+            <!-- Timeline elements wrapper -->
+            <div id="activityContainer" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Loaded dynamically by javascript -->
+                <div class="skeleton" style="height: 50px; width: 100%;"></div>
+                <div class="skeleton" style="height: 50px; width: 100%; margin-top: 10px;"></div>
+            </div>
+        </section>
+
+        <!-- Insights Footer Banner -->
+        <footer class="dashboard-footer">
+            <p class="footer-text">
+                💡 <strong>Tip:</strong> Ensure your profile information matches the criteria on the browse page to attract recruiting mentors!
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- Project Scripts -->
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/dashboard.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/app.js"></script>
+
+</body>
+</html>

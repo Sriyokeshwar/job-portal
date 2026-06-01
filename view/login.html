@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Securely access your JobFlow account to find, track, and manage all your shared job applications.">
+    <title>Login | JobFlow Job Portal</title>
+    <link rel="icon" href="../assets/icons/icon.png">
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/forms.css">
+    <link rel="stylesheet" href="../style/pages.css">
+    <link rel="stylesheet" href="../style/themes.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+
+<main class="main-content auth-page">
+
+    <div class="login-container glass-panel">
+
+        <header class="auth-header">
+            <img src="../assets/icons/logo.png" alt="JobFlow Logo" class="logoim">
+            <h1 class="logo">JobFlow</h1>
+            <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <h2 class="page-title" style="text-align:center;margin-bottom:8px;">Welcome Back</h2>
+
+        <p class="auth-text">
+            Login to continue your job tracking journey, share active openings, and monitor your career milestones.
+        </p>
+
+        <form id="loginForm" class="auth-form" novalidate>
+
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="email" class="field-label">
+                    📧 Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    class="input-box"
+                    placeholder="karthik@example.com"
+                    required
+                    autocomplete="email"
+                >
+
+                <small id="loginEmailError" class="error-message"></small>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="password" class="field-label">
+                    🔒 Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    class="input-box"
+                    placeholder="••••••••"
+                    required
+                    autocomplete="current-password"
+                >
+
+                <small id="loginPasswordError" class="error-message"></small>
+            </div>
+
+            <button type="submit" id="loginBtn" class="submit-btn">
+                <span>Login 🔑</span>
+            </button>
+
+        </form>
+
+        <section class="auth-info" aria-label="Benefits Summary">
+            <div class="info-item">
+                📋 Track all your job applications in real-time
+            </div>
+
+            <div class="info-item">
+                🔍 Discover community shared opportunities instantly
+            </div>
+
+            <div class="info-item">
+                📊 View detailed career application analytics
+            </div>
+        </section>
+
+        <p class="redirect-text">
+            Don't have an account?
+            <a href="./register.html" class="redirect-link">
+                Register Here
+            </a>
+        </p>
+
+        <p class="redirect-text">
+            <a href="../index.html"
+               class="redirect-link"
+               style="color:var(--text-secondary);font-weight:500;">
+                ← Back to Home
+            </a>
+        </p>
+
+    </div>
+
+</main>
+
+<script src="../script/api.js"></script>
+<script src="../script/auth.js"></script>
+<script src="../script/theme.js"></script>
+
+</body>
+</html>
